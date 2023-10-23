@@ -8,8 +8,8 @@ Create, Read, Update, and Delete past events.
 Add, Update, and Read team members.  
 
 ## VIDEO
-
-
+check out the working video of my project video  
+https://github.com/anushrevankar24/WEC_Discord_BOT/assets/129506519/bdf09ab6-77a7-497c-86f1-22ec2875f541
 
 ## Prerequisites
 Python 3.x installed.  
@@ -78,6 +78,4 @@ This project is licensed under the MIT License. Feel free to use, modify, and di
 
 Note: Remember to set up your MongoDB connection and environment variables properly before running the application.  
 
-[Provide a video recording here demonstrating your submission if possible.]
 
-[Include a link to the deployed application if available.]
