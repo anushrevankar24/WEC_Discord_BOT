@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <h3> Select operation you want to perform in TEAM Database</h3>
+<style>
+    button {
+        display: inline-block;
+        padding: 10px 20px; 
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border: 1px solid #007bff;
+        border-radius: 10px;
+        font-weight: bold;
+        margin: 5px;
+        transition: background-color 0.4s, color 0.4s;
+    }
+    </style>
+</head>
+<body>
+    <button id="toggleButton">ADD NEW MEMBER</button>
+        <form id="myForm" style="display: none;" action="/add_member" method="POST">
+        <!-- Your form fields here -->
+        <input type="text" name="name" placeholder="name">
+        <input type="text" name="position" placeholder="position">
+        <input type="text" name="gmail" placeholder="Gmail">
+        <input type="text" name="github" placeholder="GitHub">
+        <input type="text" name="linkedin" placeholder="Linkedin">
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        const toggleButton = document.getElementById("toggleButton");
+        const myForm = document.getElementById("myForm");
+
+        toggleButton.addEventListener("click", () => {
+            if (myForm.style.display === "none") {
+                myForm.style.display = "block";
+            } else {
+                myForm.style.display = "none";
+            }
+        });
+    </script>
+    <button id="updateButton">UPDATE MEMBER</button>
+        <form id="updateForm" style="display: none;" action="/update_member" method="post">
+        <!-- Your form fields here -->
+            <input type="text" name="name" placeholder="name">
+            <input type="text" name="position" placeholder="position">
+            <input type="text" name="gmail" placeholder="Gmail">
+            <input type="text" name="github" placeholder="GitHub">
+            <input type="text" name="linkedin" placeholder="Linkedin">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        const updateButton = document.getElementById("updateButton");
+        const updateForm = document.getElementById("updateForm");
+
+        updateButton.addEventListener("click", () => {
+            if (updateForm.style.display === "none") {
+                updateForm.style.display = "block";
+            } else {
+                    updateForm.style.display = "none";
+            }
+        });
+
+    </script>
+    <form action="/read_member" method="get">
+        <button type="submit">READ MEMBERS</button>
+    </form>
+
+    <!-- Display the list of upcoming events here -->
+    <ul>
+        {% for member in members %}
+        <li>
+            <strong>Name:</strong> {{ member.name }}<br>
+            <strong>Position:</strong> {{ member.position }}<br>
+            <strong>Gmail:</strong> {{ member.gmail }}<br>
+            <strong>GitHub:</strong> {{ member.github }}<br>
+            <strong>Linkedin:</strong> {{ member.linkedin | replace("\n", "<br>") }}
+        </li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>

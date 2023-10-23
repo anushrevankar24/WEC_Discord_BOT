@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <h3>Select the operation you want to perform in UPCOMING EVENTS Database </h3>
+
+</head>
+<body>
+    <style>
+        button {
+            display: inline-block;
+            padding: 10px 20px; 
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border: 1px solid #007bff;
+            border-radius: 10px;
+            font-weight: bold;
+            margin: 5px;
+            transition: background-color 0.4s, color 0.4s;
+        } 
+        </style>
+    <button id="toggleButton">ADD NEW EVENT</button>
+        <form id="myForm" style="display: none;" action="/create_upcoming_event" method="post">
+        <!-- Your form fields here -->
+        <input type="text" name="name" placeholder="name">
+        <input type="text" name="date" placeholder="date">
+        <input type="text" name="time" placeholder="time">
+        <input type="text" name="venue" placeholder="location">
+        <input type="text" name="description" placeholder="description">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        const toggleButton = document.getElementById("toggleButton");
+        const myForm = document.getElementById("myForm");
+
+        toggleButton.addEventListener("click", () => {
+            if (myForm.style.display === "none") {
+                myForm.style.display = "block";
+            } else {
+                myForm.style.display = "none";
+            }
+        });
+    </script>
+
+    
+    <button id="deleteButton">DELETE EVENT</button>
+        <form id="deleteForm" style="display: none;" action="/delete_upcoming_event" method="post">
+        <!-- Your form fields here -->
+        <input type="text" name="name" placeholder="Enter the name of the event you want to delete">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        const deleteButton = document.getElementById("deleteButton");
+        const deleteForm = document.getElementById("deleteForm");
+
+            deleteButton.addEventListener("click", () => {
+            if (deleteForm.style.display === "none") {
+                    deleteForm.style.display = "block";
+            } else {
+                        deleteForm.style.display = "none";
+            }
+        });
+
+    </script>
+    <button id="updateButton">UPDATE EVENT</button>
+        <form id="updateForm" style="display: none;" action="/update_upcoming_event" method="post">
+        <!-- Your form fields here -->
+        <input type="text" name="name" placeholder="name">
+        <input type="text" name="date" placeholder="date">
+        <input type="text" name="time" placeholder="time">
+        <input type="text" name="venue" placeholder="location">
+        <input type="text" name="description" placeholder="description">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        const updateButton = document.getElementById("updateButton");
+        const updateForm = document.getElementById("updateForm");
+
+        updateButton.addEventListener("click", () => {
+            if (updateForm.style.display === "none") {
+                updateForm.style.display = "block";
+            } else {
+                    updateForm.style.display = "none";
+            }
+        });
+
+    </script>
+    <form action="/read_upcoming_events" method="get">
+        <button type="submit">READ EVENTS</button>
+    </form>
+
+    <!-- Display the list of upcoming events here -->
+    <ul>
+        {% for event in events %}
+        <li>
+            <strong>Name:</strong> {{ event.name }}<br>
+            <strong>Date:</strong> {{ event.date }}<br>
+            <strong>Time:</strong> {{ event.time }}<br>
+            <strong>Venue:</strong> {{ event.venue }}<br>
+            <strong>Description:</strong> {{ event.description | replace("\n", "<br>") }}
+        </li>
+        {% endfor %}
+    </ul>
+    
+</body>
+</html>

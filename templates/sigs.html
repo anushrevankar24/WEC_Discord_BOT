@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <h3> Select the operation you want to perform in SIGs </h3>
+<style>
+    button {
+        display: inline-block;
+        padding: 10px 20px; 
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border: 1px solid #007bff;
+        border-radius: 10px;
+        font-weight: bold;
+        margin: 5px;
+        transition: background-color 0.4s, color 0.4s;
+    }
+    </style>
+</head>
+<body>
+    <button id="toggleButton">ADD NEW SIG</button>
+        <form id="myForm" style="display: none;" action="/create_sig" method="post">
+        <!-- Your form fields here -->
+        <input type="text" name="name" placeholder="name">
+        <input type="text" name="description" placeholder="description">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        const toggleButton = document.getElementById("toggleButton");
+        const myForm = document.getElementById("myForm");
+
+        toggleButton.addEventListener("click", () => {
+            if (myForm.style.display === "none") {
+                myForm.style.display = "block";
+            } else {
+                myForm.style.display = "none";
+            }
+        });
+    </script>
+    </script>
+    <button id="updateButton">UPDATE SIG</button>
+        <form id="updateForm" style="display: none;" action="/update_sig" method="post">
+        <!-- Your form fields here -->
+        <input type="text" name="name" placeholder="Enter the name of SIG">
+        <input type="text" name="description" placeholder="description">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        const updateButton = document.getElementById("updateButton");
+        const updateForm = document.getElementById("updateForm");
+
+        updateButton.addEventListener("click", () => {
+            if (updateForm.style.display === "none") {
+                updateForm.style.display = "block";
+            } else {
+                    updateForm.style.display = "none";
+            }
+        });
+
+    </script>
+    <form action="/read_sigs" method="get">
+        <button type="submit">READ SIGS</button>
+    </form>
+
+    <!-- Display the list of upcoming events here -->
+    <ul>
+        {% for sig in sigs %}
+        <li>
+
+            <strong>Name:</strong> {{ sig.name }}<br>
+            <strong>Description:</strong> {{ sig.description | replace("\n", "<br>") }}
+        </li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
