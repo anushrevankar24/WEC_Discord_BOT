@@ -9,8 +9,16 @@ Discord is a popular communication platform designed for creating communities. I
 Hello Command: Greet the bot with a simple "Hello!" command.  
 List SIGs Command: Get information about the Special Interest Groups (SIGs) within the Web Enthusiasts' Club.  
 Past Events Command: Retrieve details about past events held within the club, including event name, date, time, venue, and description.  
-Upcoming Events Command: Find out about upcoming events within the club, including event name, date, time, venue, and description.   
+Upcoming Events Command: Find out about upcoming 
+
+
+
+events within the club, including event name, date, time, venue, and description.   
 Team Command: Get to know the club's team members, including their names, positions, GitHub profiles, Gmail addresses, and LinkedIn profiles.  
+
+## VIDEO
+check out the working video of my project  
+https://github.com/anushrevankar24/WEC_Discord_BOT/assets/129506519/0feb7033-0a25-449d-99f0-a4cf51d8ff5d
 
 ## Technologies Used
 Discord.py: The Discord API wrapper that allows the bot to interact with the Discord platform.  
@@ -57,10 +65,6 @@ Once the bot is set up and running, you can interact with it using the following
 **$upcomingevents** or **$uevents** or **$upcoming events**or **$upcoming_events** : Find out about upcoming events, including event name, date, time, venue, and description. 
 
 **$team** or **$TEAM** or **$core** : Get to know the club's team members, including their names, positions, GitHub profiles, Gmail addresses, and LinkedIn profiles.  
-
- ## Working Demo
- check out this video 
- 
 
 ## Contributing
 We welcome contributions from the community. If you have any ideas or improvements to suggest, please follow these guidelines:
