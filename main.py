@@ -70,7 +70,7 @@ async def create_upcoming_event(request :Request,name: str = Form(...), date: st
                 "description": description
             }
         
-        insert_result=upcoming_event_collection.insert_one(event_data)
+        upcoming_event_collection.insert_one(event_data)
         return {"message": "Form data processed successfully"}
 @app.post("/update_upcoming_event")
 async def update_upcoming_event(name: str = Form(...), date: str = Form(...),venue: str = Form(...),time:str = Form(...),description: str = Form(...) ):
