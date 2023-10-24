@@ -25,9 +25,7 @@ db=client['WEC_Discord_Bot_DataBase']
 async def welcome_message(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
-@app.get("/submit", response_class=HTMLResponse)
-async def submit(request: Request):
-    return templates.TemplateResponse("submit.html", {"request": request})
+
 
                                                       
 #SIGS
@@ -73,10 +71,6 @@ async def create_upcoming_event(request :Request,name: str = Form(...), date: st
             }
         
         insert_result=upcoming_event_collection.insert_one(event_data)
-        if insert_result.acknowledged:
-            return templates.TemplateResponse("submit.html", {"request":request})  
-        else:
-            print("Failed to add member to the database")
         return {"message": "Form data processed successfully"}
 @app.post("/update_upcoming_event")
 async def update_upcoming_event(name: str = Form(...), date: str = Form(...),venue: str = Form(...),time:str = Form(...),description: str = Form(...) ):
@@ -155,7 +149,7 @@ async def add_member(request: Request,name: str = Form(...), position: str = For
                 "github":github,
                 "linkedin": linkedin
             }
-        # team_collection.insert_one(member_data)
+
         team_collection.insert_one(member_data)
 @app.post("/update_member")
 async def update_member(name: str = Form(...), position: str = Form(...),gmail: str = Form(...),github:str = Form(...),linkedin: str = Form(...) ):
