@@ -27,7 +27,7 @@ async def welcome_message(request: Request):
 
 @app.get("/submit", response_class=HTMLResponse)
 async def submit(request: Request):
-    return templates.TemplateResponse("submit.html", {"request": request
+    return templates.TemplateResponse("submit.html", {"request": request})
 
                                                       
 #SIGS
