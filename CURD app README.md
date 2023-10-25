@@ -11,9 +11,11 @@ Add, Update, and Read team members.
 check out the working video of my project video  
 https://github.com/anushrevankar24/WEC_Discord_BOT/assets/129506519/bdf09ab6-77a7-497c-86f1-22ec2875f541
 
+
 ## TRY IT OUT 
  **Website is live**   
- CLICK HERE : [Website Link](https://curd-web-app.onrender.com)
+ CLICK HERE : [Website Link](https://curd-web-app.onrender.com)  
+ **Note** : The website may take some time to Load  
 
 ## Prerequisites
 Python 3.x installed.  
