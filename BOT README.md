@@ -1,6 +1,7 @@
 # Web Enthusiasts' Club Discord Bot
 ## WEC Discord Bot Logo
-![WEC_image](https://github.com/anushrevankar24/WEC_Discord_BOT/assets/129506519/b73341f2-d324-43b5-b7b9-fd0b7f4c5277)
+![WEC_logo](https://github.com/anushrevankar24/WEC_Discord_BOT/assets/129506519/54ed6c3e-dd8b-45d4-b4ba-3e0029530409)
+
 
 ## Introduction
 Discord is a popular communication platform designed for creating communities. It's not only widely used by gamers but is also a versatile tool for various interest groups, businesses, and developers. This project focuses on the development of an interactive Discord bot for the Web Enthusiasts' Club (WEC). The bot is designed to provide information about the club, including upcoming events, Special Interest Groups (SIGs), past events within SIGs, non-technical events, and details about club members.
