@@ -18,8 +18,8 @@ events within the club, including event name, date, time, venue, and description
 Team Command: Get to know the club's team members, including their names, positions, GitHub profiles, Gmail addresses, and LinkedIn profiles.  
 
 ## VIDEO
-check out the working video of my project  
-[Google Drive Link](https://drive.google.com/drive/folders/1PxNd2nkEVdzHtA2dc_aqe10eH0yLBOkY)
+**Check out the working video of my project**     
+[Video Link](https://drive.google.com/file/d/1Q0qZMuDsVy_Mtnjf1t3fvu80fCkRF5vg/view?usp=drivesdk)
 
 ## TRY IT OUT :
 **IMPORTANT INSTRUCTIONS**    
