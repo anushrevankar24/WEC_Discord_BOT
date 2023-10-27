@@ -8,8 +8,8 @@ Create, Read, Update, and Delete past events.
 Add, Update, and Read team members.  
 
 ## VIDEO
-check out the working video of my project video  
-https://github.com/anushrevankar24/WEC_Discord_BOT/assets/129506519/bdf09ab6-77a7-497c-86f1-22ec2875f541
+**Check out the working video of my project**   
+[Video Link](https://drive.google.com/file/d/1QAKrkHmouR2oB6LFRJLC70ACLvGa8pFp/view?usp=drivesdk)
 
  ## TRY IT OUT 
  **Website is live**   
