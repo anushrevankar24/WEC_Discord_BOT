@@ -19,7 +19,7 @@ Team Command: Get to know the club's team members, including their names, positi
 
 ## VIDEO
 check out the working video of my project  
-https://github.com/anushrevankar24/WEC_Discord_BOT/assets/129506519/0feb7033-0a25-449d-99f0-a4cf51d8ff5d
+[Google Drive Link](https://drive.google.com/drive/folders/1PxNd2nkEVdzHtA2dc_aqe10eH0yLBOkY)
 
 ## TRY IT OUT :
 **IMPORTANT INSTRUCTIONS**    
